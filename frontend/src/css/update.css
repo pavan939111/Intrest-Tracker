@@ -1,0 +1,195 @@
+/* 📁 css/update.css */
+
+.update-page {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fefefe;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Header Section */
+.update-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.update-header h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #1e3a8a;
+  flex-grow: 1;
+}
+
+.go-back-btn {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+.go-back-btn:hover {
+  background-color: #ddd;
+}
+
+/* General Info */
+.update-page p {
+  margin: 8px 0;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Action Buttons */
+.update-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.update-actions button {
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s ease;
+  font-weight: 500;
+}
+
+.delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #e60000;
+}
+
+.edit-btn {
+  background-color: #2196f3;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #0b7dda;
+}
+
+.interest-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.interest-btn:hover {
+  background-color: #388e3c;
+}
+
+/* Confirm Section */
+.confirm-clear,
+.rewrite-section,
+.interest-clear {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-radius: 6px;
+  border-left: 4px solid #2196f3;
+}
+
+.confirm-clear p,
+.rewrite-section p,
+.interest-clear p {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.confirm-clear button,
+.rewrite-section button,
+.interest-clear button {
+  background-color: #1976d2;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.confirm-clear button:hover,
+.rewrite-section button:hover,
+.interest-clear button:hover {
+  background-color: #0d47a1;
+}
+
+/* Input Fields */
+input[type="number"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  font-size: 14px;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+  outline: none;
+  border-color: #2196f3;
+  box-shadow: 0 0 4px #2196f3;
+}
+
+/* Error Text */
+.error-message {
+  color: #d32f2f;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .update-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .update-header h2 {
+    font-size: 20px;
+  }
+
+  .go-back-btn {
+    width: 100%;
+    font-size: 15px;
+    margin-top: 8px;
+  }
+
+  .update-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .update-actions button {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .confirm-clear button,
+  .rewrite-section button,
+  .interest-clear button {
+    width: 100%;
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,142 @@
+/* ===== Base Reset and Layout ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.94)),
+              url("https://images.unsplash.com/photo-1605902711622-cfb43c4437b2?auto=format&fit=crop&w=1470&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #1e293b; /* Tailwind slate-800 */
+  overflow-x: hidden;
+}
+
+/* ===== Responsive Background for Mobile ===== */
+@media (max-width: 640px) {
+  html, body {
+    background: linear-gradient(rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.97)),
+                url("https://images.unsplash.com/photo-1605902711622-cfb43c4437b2?auto=format&fit=crop&w=768&q=60");
+    background-size: cover;
+    background-position: top center;
+    background-attachment: scroll;
+  }
+}
+
+/* ===== Typography ===== */
+h1, h2, h3, h4 {
+  color: #0f172a; /* Tailwind slate-900 */
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #475569; /* Tailwind slate-600 */
+}
+
+/* ===== Buttons ===== */
+button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #3b82f6; /* Tailwind blue-500 */
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2563eb; /* Tailwind blue-600 */
+}
+
+/* ===== Links ===== */
+a {
+  color: #1d4ed8; /* Tailwind blue-700 */
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #6366f1; /* Tailwind indigo-500 */
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9; /* Tailwind slate-100 */
+}
+
+/* ===== Text Selection ===== */
+::selection {
+  background-color: #c7d2fe; /* Tailwind indigo-200 */
+  color: #000;
+}
+
+/* ===== Font Resize for Mobile ===== */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 1.7rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* ===== Page Content Wrapper ===== */
+.page-content {
+  position: relative;
+  z-index: 0; /* Keep content below dropdowns */
+  min-height: 100vh;
+  padding-top: 70px;
+  background: transparent;
+  overflow: hidden;
+}
+
+/* ===== 3D Animated Floating Shapes Background ===== */
+.page-content::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: 
+    radial-gradient(circle, rgba(253, 186, 116, 0.25) 10%, transparent 11%),  /* orange-300 */
+    radial-gradient(circle, rgba(134, 239, 172, 0.25) 10%, transparent 11%),  /* green-300 */
+    radial-gradient(circle, rgba(230, 209, 28, 0.25) 10%, transparent 11%);  /* blue-300 */
+  background-size: 150px 150px;
+  background-position: 0 0, 75px 75px, 150px 150px;
+  animation: float-3d 18s linear infinite;
+  z-index: -1;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* ===== Floating 3D Animation Keyframes ===== */
+@keyframes float-3d {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(40px, -20px) scale(1.02);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}

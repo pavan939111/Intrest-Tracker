@@ -1,0 +1,224 @@
+/* 📁 css/giver.css */
+
+.giver-container {
+  max-width: 650px;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Header with Title & Go Back ===== */
+.giver-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.giver-heading {
+  color: #1e3a8a;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* ===== Go Back Button ===== */
+.go-back-btn {
+  padding: 8px 14px;
+  background: #f3f4f6;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.go-back-btn:hover {
+  background-color: #e5e7eb;
+}
+
+/* ===== Top Action Buttons ===== */
+.giver-top-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.show-form-btn,
+.history-btn {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.show-form-btn:hover,
+.history-btn:hover {
+  background-color: #0056b3;
+}
+
+/* ===== Form Styling ===== */
+.giver-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.giver-form input {
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.giver-form input:focus {
+  border-color: #2563eb;
+}
+
+.giver-form button {
+  padding: 10px;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.giver-form button:hover {
+  background-color: #1e40af;
+}
+
+/* ===== Lending Entries List ===== */
+.giver-list {
+  margin-top: 20px;
+}
+
+.giver-list h3 {
+  color: #334155;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.giver-entry {
+  background-color: #e2e8f0;
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.giver-entry:hover {
+  background-color: #cbd5e1;
+}
+
+.giver-entry p {
+  margin: 4px 0;
+  color: #1e293b;
+  font-size: 15px;
+}
+
+/* ===== Update Button Styling ===== */
+.update-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.update-btn:hover {
+  background-color: #4338ca;
+}
+
+/* ===== History Section ===== */
+.history-list {
+  margin-top: 30px;
+}
+
+.history-list h3 {
+  color: #334155;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+/* ===== Responsive Styling ===== */
+@media (max-width: 600px) {
+  .giver-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .giver-top-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .show-form-btn,
+  .history-btn {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .go-back-btn {
+    width: 100%;
+  }
+
+  .giver-entry p {
+    font-size: 14px;
+  }
+
+  .update-btn {
+    width: 100%;
+    padding: 10px;
+  }
+}
+/* Add margin from top to separate from navbar */
+/* .giver-container {
+  margin-top: 80px; /* ✅ pushes content below navbar */
+ 
+
+/* Capitalize name display */
+.giver-entry strong {
+  text-transform: uppercase; /* ✅ forces name to all capital letters */
+}
+
+/* Flex layout for better alignment of entry content */
+.giver-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.giver-entry-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  color: #1e293b;
+}
+
+.giver-entry-row span:first-child {
+  font-weight: 600;
+}
+
+.update-btn {
+  align-self: flex-end; /* aligns button to right */
+  margin-top: 10px;
+}

@@ -1,0 +1,214 @@
+/* Container */
+.update-page {
+  max-width: 650px;
+ 
+  padding: 34px;
+   margin: 40px auto 40px auto; 
+  /* background-color: #fefefe; */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Header */
+.update-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.update-header h2 {
+  font-size: 22px;
+  color: #1e3a8a;
+  margin: 0;
+}
+
+.go-back-btn {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+}
+
+.go-back-btn:hover {
+  background-color: #ddd;
+}
+
+/* Paragraphs */
+.update-page p {
+  font-size: 15px;
+  margin: 8px 0;
+  color: #333;
+}
+
+/* Error */
+.error-message {
+  color: #d32f2f;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Action Buttons */
+.update-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.update-actions button {
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s ease;
+  font-weight: 600;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+}
+
+.edit-btn {
+  background-color: #3b82f6;
+}
+
+.edit-btn:hover {
+  background-color: #2563eb;
+}
+
+.interest-btn {
+  background-color: #10b981;
+}
+
+.interest-btn:hover {
+  background-color: #059669;
+}
+
+/* Sections */
+.confirm-clear,
+.rewrite-section,
+.interest-clear {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f1f5f9;
+  border-radius: 6px;
+  border-left: 4px solid #3b82f6;
+}
+
+.confirm-clear p,
+.rewrite-section p,
+.interest-clear p {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.confirm-clear button,
+.rewrite-section button,
+.interest-clear button {
+  background-color: #1d4ed8;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.confirm-clear button:hover,
+.rewrite-section button:hover,
+.interest-clear button:hover {
+  background-color: #1e3a8a;
+}
+
+/* Inputs */
+input[type="number"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 4px #3b82f6;
+}
+
+/* Update Form */
+.update-form input {
+  width: 100%;
+}
+
+.update-form button {
+  width: 100%;
+  background-color: #16a34a;
+  color: white;
+  font-size: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.update-form button:hover {
+  background-color: #15803d;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .update-page {
+    padding: 16px;
+  }
+
+  .update-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .update-header h2 {
+    font-size: 20px;
+  }
+
+  .update-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .update-actions button {
+    width: 100%;
+  }
+
+  .confirm-clear button,
+  .rewrite-section button,
+  .interest-clear button {
+    width: 100%;
+  }
+
+  .go-back-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

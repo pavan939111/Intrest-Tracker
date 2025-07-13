@@ -1,0 +1,117 @@
+/* ==== Login Page Container ==== */
+.login-container {
+  /* background-color: #f3f4f6; */
+  min-height: calc(100vh - 55px); /* Adjust for fixed navbar height */
+  padding-top: 30px;              /* Reduced top spacing */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+ 
+}
+
+/* ==== Login Box ==== */
+.login-form {
+   margin-top: 100px;
+  background-color: white;
+  padding: 28px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ==== Login Title ==== */
+.login-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1e3a8a;
+}
+
+/* ==== Labels ==== */
+.login-label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ==== Input Fields ==== */
+.login-input,
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e0;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* ==== Submit Button ==== */
+.login-button,
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.login-button:hover,
+button[type="submit"]:hover {
+  background-color: #1d4ed8;
+}
+
+/* ==== Error & Loading Messages ==== */
+.error-message,
+.loading-message {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.error-message {
+  color: red;
+}
+
+.loading-message {
+  color: #2563eb;
+}
+
+/* ==== Register Link ==== */
+.register-link {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ==== Mobile Responsive ==== */
+@media (max-width: 480px) {
+  .login-form {
+    padding: 20px;
+  }
+
+  .login-title {
+    font-size: 20px;
+  }
+
+  .login-input,
+  input[type="email"],
+  input[type="password"] {
+    font-size: 13px;
+  }
+
+  .login-button,
+  button[type="submit"] {
+    font-size: 14px;
+  }
+}
